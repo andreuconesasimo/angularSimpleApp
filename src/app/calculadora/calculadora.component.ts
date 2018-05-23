@@ -7,24 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculadoraComponent implements OnInit, ICalculadora {
 
+  total = 0;
   
   sumar(numeroUno: number, numeroDos: number):number
   {
+    this.total = numeroUno + numeroDos;
 		return numeroUno+numeroDos;
   }
   
   restar(numeroUno: number, numeroDos: number):number
   {
-		return numeroUno-numeroDos;
+    this.total = numeroUno-numeroDos;
+    return numeroUno-numeroDos;
   }
   
   multiplicar(numeroUno: number, numeroDos: number):number
   {
+    this.total = numeroUno*numeroDos;
 		return numeroUno*numeroDos;
   }
   
   dividir(numeroUno: number, numeroDos: number):number
   {
+    this.total = numeroUno/numeroDos;
 		return numeroUno/numeroDos;
 	}
   

@@ -17,23 +17,23 @@ export class CalculadoraComponent implements OnInit {
   
   sumar():void
   {
-    this.total = this.calculadoraForm.get("num1").value  + this.calculadoraForm.get("num2").value;
+    this.total = +this.calculadoraForm.get("num1").value  + +this.calculadoraForm.get("num2").value;
 		
   }
   
   restar():void
   {
-    this.total = this.calculadoraForm.get("num1").value  - this.calculadoraForm.get("num2").value;
+    this.total = +this.calculadoraForm.get("num1").value  - +this.calculadoraForm.get("num2").value;
   }
   
   multiplicar():void
   {
-    this.total = this.calculadoraForm.get("num1").value * this.calculadoraForm.get("num2").value;
+    this.total = +this.calculadoraForm.get("num1").value * +this.calculadoraForm.get("num2").value;
   }
   
   dividir():void
   {
-    this.total = this.calculadoraForm.get("num1").value / this.calculadoraForm.get("num2").value;
+    this.total = +this.calculadoraForm.get("num1").value / +this.calculadoraForm.get("num2").value;
 	}
   
   constructor() { }

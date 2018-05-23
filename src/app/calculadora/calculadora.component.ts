@@ -21,22 +21,19 @@ export class CalculadoraComponent implements OnInit {
 		
   }
   
-  restar(numeroUno: number, numeroDos: number):number
+  restar():void
   {
-    this.total = numeroUno-numeroDos;
-    return numeroUno-numeroDos;
+    this.total = this.calculadoraForm.get("num1").value  - this.calculadoraForm.get("num2").value;
   }
   
-  multiplicar(numeroUno: number, numeroDos: number):number
+  multiplicar():void
   {
-    this.total = numeroUno*numeroDos;
-		return numeroUno*numeroDos;
+    this.total = this.calculadoraForm.get("num1").value * this.calculadoraForm.get("num2").value;
   }
   
-  dividir(numeroUno: number, numeroDos: number):number
+  dividir():void
   {
-    this.total = numeroUno/numeroDos;
-		return numeroUno/numeroDos;
+    this.total = this.calculadoraForm.get("num1").value / this.calculadoraForm.get("num2").value;
 	}
   
   constructor() { }

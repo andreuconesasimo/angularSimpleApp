@@ -1,9 +1,22 @@
-<form>
-<input type="text" id="numero-uno">
-<input type="text" id="numero-dos">
-<input type="button" onclick="calculadora.sumar()" value="+">
-<input type="button" onclick="calculadora.restar()" value="-">
-<input type="button" onclick="calculadora.multiplicar()" value="*">
-<input type="button" onclick="calculadora.dividir()" value="/">
+<form [formGroup]="calculadoraForm">
+
+  <div>
+    <input type="text" id="numero-uno" formControlName="num1">
+  </div>
+  <div>
+    <input type="text" id="numero-dos" formControlName="num2">
+  </div>
+  <div>
+    <input type="button" (click)="sumar()" value="+">
+  </div>
+  <div>
+    <input type="button" (click)="restar()" value="-">
+  </div>
+  <div>
+    <input type="button" (click)="multiplicar()" value="*">
+  </div>
+  <div>
+    <input type="button" (click)="dividir()" value="/">
+  </div>
 </form>
 <p>Total: <span id="total">{{total}}</span></p>
